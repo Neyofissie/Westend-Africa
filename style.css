@@ -14,3 +14,32 @@ h1,h2{font-family:Arial,Helvetica,sans-serif;font-weight:300;letter-spacing:-.06
 
 .store-inputs input,.store-inputs select{color:#222}
 @media(prefers-reduced-motion:reduce){.store-photo img{transition:none}}
+
+/* Scrollable door detail story */
+#product-dialog{width:min(1260px,96vw);max-height:92dvh;overscroll-behavior:contain}
+#product-dialog .dialog-layout{grid-template-columns:minmax(0,1.35fr) minmax(280px,.8fr);align-items:start}
+#product-dialog .dialog-close{position:sticky;display:block;top:14px;margin:14px 14px -54px auto;z-index:5}
+.door-detail-gallery{min-width:0;background:#e8e5de}
+.door-detail-view{margin:0;border-bottom:1px solid #d4cfc5}
+.door-detail-image{height:min(76dvh,850px);overflow:hidden;background:#e8e5de}
+.door-detail-image img{width:100%;height:100%;object-fit:contain;display:block}
+.door-detail-image.handle img{object-fit:cover;object-position:65% 53%;transform:scale(1.7)}
+.door-detail-image.surface img{object-fit:cover;object-position:48% 40%;transform:scale(2.4)}
+.door-detail-view figcaption{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:25px 28px;background:#efede7}
+.door-detail-view .eyebrow{font-size:11px}.door-detail-view p{font-size:12px;color:#777168;margin:8px 0 0}
+.detail-enlarge{background:none;border:1px solid #a9a294;padding:12px 16px;white-space:nowrap;font-size:12px;color:#222;cursor:pointer}
+#product-dialog .dialog-copy{position:sticky;top:40px;align-self:start;padding:80px 38px 40px}
+.door-zoom[hidden]{display:none}.door-zoom{position:absolute;inset:0;background:#efede7;z-index:10;display:flex;flex-direction:column;height:92dvh}
+.zoom-close{align-self:start;background:#20221e;color:white;border:0;padding:14px 22px;margin:14px;cursor:pointer}
+.zoom-scroll{overflow:auto;flex:1;min-height:0;text-align:center;overscroll-behavior:contain}
+.zoom-scroll img{display:block;width:max(100%,900px);max-width:none;height:auto;margin:0 auto}
+.door-zoom>p{font-size:11px;text-align:center;margin:10px}
+@media(max-width:700px){#product-dialog .dialog-layout{display:flex;flex-direction:column}#product-dialog .dialog-copy{position:static;order:-1;padding:65px 25px 25px}.door-detail-gallery{width:100%}.door-detail-image{height:65dvh}.door-detail-view figcaption{padding:20px}.door-detail-view p{max-width:190px}.door-detail-image.handle img{transform:scale(1.6)}.door-detail-image.surface img{transform:scale(2)}}
+
+/* Thumbnail-led architectural product viewer */
+#product-dialog.store-product-dialog{width:100vw;max-width:none;height:100dvh;max-height:100dvh;margin:0;padding:0;background:#f5f3ee;overflow:auto}
+.product-top{height:78px;display:flex;justify-content:space-between;align-items:center;padding:0 4vw;border-bottom:1px solid #dedbd3;font-size:12px;letter-spacing:.12em;background:#f5f3ee}.product-top-muted{color:#928b80;margin-left:20px;font-size:10px}#product-dialog.store-product-dialog .dialog-close{position:static;margin:0;width:auto;height:auto;padding:12px 0;border-radius:0;background:none;font-size:13px;color:#222;letter-spacing:0}
+.multi-product{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(300px,1fr);min-height:calc(100dvh - 78px)}.multi-media{display:grid;grid-template-columns:82px minmax(0,1fr);gap:22px;padding:35px 28px 35px 3vw;background:#eae7e1;align-items:start}.multi-thumbnails{display:flex;flex-direction:column;gap:14px}.multi-thumbnails button{position:relative;padding:4px;background:#f7f6f2;border:1px solid transparent;cursor:pointer;aspect-ratio:4/5}.multi-thumbnails button[aria-pressed=true]{border-color:#242721}.multi-thumbnails img{width:100%;height:100%;object-fit:contain}.multi-thumbnails span{position:absolute;bottom:5px;left:6px;font-size:9px;background:#f5f3eeda;padding:3px}
+.multi-stage{position:relative;min-width:0}.multi-photo{height:calc(100dvh - 210px);min-height:370px;overflow:hidden;background:#f1efea}.multi-image{width:100%;height:100%;object-fit:contain;display:block}.multi-photo.handle .multi-image{object-fit:cover;object-position:65% 50%;transform:scale(1.6)}.multi-photo.surface .multi-image{object-fit:cover;object-position:45% 35%;transform:scale(2.2)}.multi-prev,.multi-next{position:absolute;top:43%;width:42px;height:42px;background:#f5f3eee8;border:1px solid #d5d0c7;border-radius:50%;cursor:pointer;font-size:19px;color:#222}.multi-prev{left:15px}.multi-next{right:15px}.multi-zoom{position:absolute;right:15px;bottom:70px;padding:10px 15px;background:#f5f3eee8;border:1px solid #d5d0c7;color:#222;font-size:11px;cursor:pointer}.multi-image-caption{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:20px 0;font-size:12px}.multi-image-caption small{font-size:10px;color:#7a7367}.is-zoomed .multi-photo{overflow:auto;cursor:zoom-out}.is-zoomed .multi-image{width:150%;height:150%;max-width:none;object-fit:contain;transform:none}.is-zoomed .multi-prev,.is-zoomed .multi-next{display:none}
+.multi-info{padding:65px 4vw 40px}.multi-info h3{font-size:clamp(35px,3.7vw,58px);font-weight:300;letter-spacing:-.045em;line-height:1.06;margin:22px 0}.multi-subtitle{color:#777265;font-size:14px;line-height:1.8;margin-bottom:38px}.multi-spec{display:flex;justify-content:space-between;gap:24px;border-top:1px solid #d7d2c8;padding:17px 0;font-size:11px;line-height:1.7}.multi-spec span{color:#777265}.multi-spec strong{font-weight:400;text-align:right}.multi-price{font-size:20px;margin:30px 0 20px}.multi-enquiry{width:100%;justify-content:center}.multi-help{font-size:11px;line-height:1.7;color:#777265;margin:15px 0 35px}.multi-info details{border-top:1px solid #d7d2c8;padding:18px 0}.multi-info summary{display:flex;justify-content:space-between;font-size:12px;cursor:pointer;list-style:none}.multi-info details p{font-size:11px;line-height:1.8;color:#777265}
+@media(max-width:800px){.product-top{height:60px}.product-top-muted{display:none}.multi-product{display:block}.multi-media{display:flex;flex-direction:column-reverse;padding:18px;gap:6px}.multi-stage{width:100%}.multi-photo{height:55dvh;min-height:300px}.multi-thumbnails{flex-direction:row;gap:10px}.multi-thumbnails button{width:64px;height:70px}.multi-image-caption{padding:14px 0}.multi-zoom{bottom:62px}.multi-info{padding:30px 24px 45px}.multi-info h3{font-size:40px}.multi-subtitle{margin-bottom:25px}}
