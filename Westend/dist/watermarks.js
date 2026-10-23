@@ -19,12 +19,10 @@
       width = photo.naturalWidth * scale; height = photo.naturalHeight * scale;
     }
     const size = Math.min(94, Math.max(16, width * .15));
-    const inset = Math.max(6, width * .035);
-    const extra = photo.id === 'scene' ? 70 : photo.classList.contains('multi-image') ? 42 : 0;
     Object.assign(mark.style, {
       width: size + 'px', height: size * .7 + 'px',
-      left: (rect.left - bounds.left + parent.scrollLeft - parent.clientLeft + (rect.width + width) / 2 - size - inset) + 'px',
-      top: (rect.top - bounds.top + parent.scrollTop - parent.clientTop + (rect.height + height) / 2 - size * .7 - inset - extra) + 'px',
+      left: (rect.left - bounds.left + parent.scrollLeft - parent.clientLeft + (rect.width - size) / 2) + 'px',
+      top: (rect.top - bounds.top + parent.scrollTop - parent.clientTop + (rect.height - size * .7) / 2) + 'px',
       visibility: width && height ? 'visible' : 'hidden'
     });
   }
