@@ -45,3 +45,5 @@ h1,h2{font-family:Arial,Helvetica,sans-serif;font-weight:300;letter-spacing:-.06
 @media(max-width:800px){.product-top{height:60px}.product-top-muted{display:none}.multi-product{display:block}.multi-media{display:flex;flex-direction:column-reverse;padding:18px;gap:6px}.multi-stage{width:100%}.multi-photo{height:55dvh;min-height:300px}.multi-thumbnails{flex-direction:row;gap:10px}.multi-thumbnails button{width:64px;height:70px}.multi-image-caption{padding:14px 0}.multi-zoom{bottom:62px}.multi-info{padding:30px 24px 45px}.multi-info h3{font-size:40px}.multi-subtitle{margin-bottom:25px}}
 
 .bestseller-label{position:absolute;bottom:12px;left:12px;padding:8px 12px;background:#292824;color:#fffdf7;font-size:10px;letter-spacing:.1em;text-transform:uppercase;z-index:2}
+
+.westend-watermark{position:absolute;display:block;pointer-events:none;user-select:none;background:#fff;opacity:.18;z-index:1;mask:url("mark.webp") center/contain no-repeat;mask-mode:luminance;-webkit-mask:url("mark.webp") center/contain no-repeat;mask-mode:luminance}
